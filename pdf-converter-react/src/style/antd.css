@@ -1,0 +1,54 @@
+.ant-card {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #db3131 !important;
+  backdrop-filter: blur(10px);
+  border-radius: 5px !important;
+}
+
+.ant-card-body {
+  width: inherit;
+  height: inherit;
+}
+
+.ant-upload {
+  background: #ec4545;
+}
+
+.ant-upload.ant-upload-drag {
+  border: 1px dashed #922121 !important;
+}
+
+.ant-upload-text {
+  color: #ffffff !important;
+  font-size: 22px !important;
+}
+.ant-upload-hint {
+  color: #cecccc !important;
+  font-size: 18px !important;
+}
+
+.ant-upload-list {
+  position: absolute;
+  top: -2%;
+  right: -52%;
+  width: 50%;
+  height: 300px;
+  overflow-y: scroll;
+}
+.ant-upload-list-item-name {
+  background: #ffffff !important;
+}
+.ant-upload-list::-webkit-scrollbar {
+  width: 5px;
+}
+.ant-upload-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgb(242 48 48);
+}
+
+@media screen and (max-width: 1300px) {
+}
