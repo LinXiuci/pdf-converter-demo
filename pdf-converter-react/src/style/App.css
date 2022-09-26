@@ -22,3 +22,11 @@
   font-size: 16px;
   background: #1398f0;
 }
+
+.info-success {
+  color: #18b459;
+}
+
+.info-error {
+  color: #e74c3c;
+}

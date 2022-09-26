@@ -1,0 +1,158 @@
+{
+  "git.enableSmartCommit": true,
+  // 配置文件类型识别
+  "files.associations": {
+    "*.js": "javascript",
+    "*.json": "jsonc",
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript"
+  },
+  "extensions.ignoreRecommendations": false,
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/node_modules": false,
+    "**/tmp": true
+  },
+  // "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "liveServer.settings.root": "./",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.port": 5800,
+  "liveServer.settings.ignoreFiles": [
+    ".vscode/**",
+    "**/*.mov"
+  ],
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.proxy": {
+    "enable": false,
+    "baseUri": "/",
+    "proxyUri": "http://113.106.54.176:8080/"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "typescript.updateImportsOnFileMove.enabled": "prompt",
+  "git.confirmSync": false,
+  "editor.tabSize": 2,
+  "editor.fontWeight": "500",
+  "[json]": {},
+  "gitlens.views.repositories.files.layout": "list",
+  "editor.tabCompletion": "on",
+  "vsicons.projectDetection.autoReload": true,
+  "docker.attachShellCommand.linuxContainer": "/bin/sh -c \"[ -e /bin/zsh ] && /bin/zsh || /bin/sh\"",
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace, Meslo LG M for Powerline",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.fontSize": 18,
+  "debug.console.fontSize": 14,
+  "vsicons.dontShowNewVersionMessage": true,
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true,
+    "suppressLineUncommittedWarning": true
+  },
+  "editor.minimap.enabled": true,
+  "minapp-vscode.disableAutoConfig": true,
+  "workbench.iconTheme": "vscode-icons",
+  "emmet.extensionsPath": [
+    ""
+  ],
+  "todo-tree.tree.showScanModeButton": false,
+  // vue eslint start 保存时自动格式化代码
+  "editor.formatOnSave": true,
+  // eslint配置项，保存时自动修复错误
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "vetur.ignoreProjectWarning": true,
+  // 让vetur使用vs自带的js格式化工具
+  // uni-app和vue 项目使用
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "javascript.format.semicolons": "remove",
+  // // 指定 *.vue 文件的格式化工具为vetur
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // // 指定 *.js 文件的格式化工具为vscode自带
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  // // 默认使用prettier格式化支持的文件
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.jsxBracketSameLine": true,
+  // 函数前面加个空格
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  // eslint end
+  // react
+  // 当按tab键的时候，会自动提示
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.includeLanguages": {
+    // jsx的提示
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "vue": "html",
+    "wxml": "html"
+  },
+  // end
+  // 编码特效
+  "powermode.enabled": false, // 开启 Power Mode
+  "powermode.shakeIntensity": 0, // 关闭抖动（喜欢的也可以选择不关闭）
+  "powermode.presets": "particles", // 特效预设，还有 "particles" "fireworks", "flames", "magic", "clippy"
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "API",
+    "FN",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "foreground": "black",
+      "background": "green",
+      "rulerColour": "green",
+      "iconColour": "green"
+    },
+    "BUG": {
+      "foreground": "black",
+      "background": "#fd1800",
+      "icon": "bug",
+      "rulerColour": "#fd1800",
+      "iconColour": "#fd1800"
+    },
+    "FIXME": {
+      "icon": "flame"
+    },
+    "FN": {
+      "foreground": "black",
+      "background": "#f0a500",
+      "icon": "rocket",
+      "rulerColour": "#f0a500",
+      "iconColour": "#f0a500"
+    }
+  },
+  "tabnine.experimentalAutoImports": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "workbench.colorTheme": "Visual Studio Dark",
+  // @路径提示
+  "path-intellisense.mappings": {
+    "@": "${workspaceRoot}/src"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.ignoreMissingGitWarning": true,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "git.ignoreLimitWarning": true,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

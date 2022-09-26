@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { InboxOutlined } from '@ant-design/icons'
-import { Card, message, Upload } from 'antd'
-import { getFileApi } from './api'
+import { Card, message, Upload, notification } from 'antd'
 import './style/antd.css'
 const { Dragger } = Upload
 
 // 获取转换格式后的url
 let pdfUrl = ''
+
+
+
 const props = {
   name: 'file',
   multiple: true,
@@ -16,7 +18,16 @@ const props = {
     const { status, response } = info.file
     if (status === 'done' && response.code === 200) {
       pdfUrl = response.url
-
+      console.log(response)
+      notification.open({
+        placement: 'topLeft',
+        duration: 4,
+        message: 'Notification Title',
+        description: <DescriptionRender response={response} />,
+        onClick: () => {
+          console.log('Notification Clicked!')
+        },
+      })
       return message.success(`${info.file.name}\t${response.message}。`)
     } else if (status === 'error') {
       message.error(`${info.file.name}\t${response}。`)
@@ -65,6 +76,24 @@ const downloadPdf = () => {
   } else {
     return message.error('请上传你的文件')
   }
+}
+
+const DescriptionRender = ({ response }) => {
+  return (
+    <>
+      <h3>{response.code}</h3>
+      <p className={response.code === 200 ? 'info-success' : 'info-error'}>
+        {response.message}
+      </p>
+      {response.url ? (
+        <a href={response.url} target="blank">
+          {response.file}
+        </a>
+      ) : (
+        ''
+      )}
+    </>
+  )
 }
 
 /***

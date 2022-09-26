@@ -1,21 +1,21 @@
-const fs     = require('fs')
-const path   = require('path')
-const Koa    = require('koa')
-const cors   = require('koa-cors')
-const serve  = require('koa-static')
+const fs = require('fs')
+const path = require('path')
+const Koa = require('koa')
+const cors = require('koa-cors')
+const serve = require('koa-static')
 const multer = require('koa-multer')
 const Router = require('koa-router')
-const toPdf  = require('office-to-pdf')
+const toPdf = require('office-to-pdf')
 
-const app    = new Koa()
+const app = new Koa()
 const router = new Router()
-const PORT   = 8080
-const URL    = `http://localhost:${PORT}/`
+const PORT = 8080
+const URL = `http://localhost:${PORT}/`
 
 
 const UPLOAD_PATH = path.join(__dirname, '/public/upload')  // 存储上传文件的目录
 const SCUESS_PATH = path.join(__dirname, '/public/pdf')     // 转换成pdf文件目录
-const LOG_PATH    = path.join(__dirname, '/log')            // 日志
+const LOG_PATH = path.join(__dirname, '/log')            // 日志
 
 app.use(cors())
 app.use(serve(UPLOAD_PATH))
@@ -52,7 +52,7 @@ function handleChangePdf (file) {
       if (error) return console.error(error.message)
       console.log(file)
       console.log('loading ...')
-      console.log('文件类型为', file.mimetype)
+      console.log('文件类型为：', file.mimetype)
       console.log('解读文件内容成功:', data)
       toPdf(data).then((res) => {
         // 写文件
@@ -79,6 +79,7 @@ function handleWriteFile (file, res) {
 }
 
 
+
 /***
  * 响应请求
  *  */
@@ -91,6 +92,7 @@ router.post('/upload/single', multerUpload.single('file'),
         code: 200,
         message: '上传成功',
         url: `${URL}${file}`,
+        file: file
       }
     } catch (error) {
       ctx.body = {
